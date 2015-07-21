@@ -5,6 +5,16 @@ import com.luxoft.client.Client;
 
 public class Bank {
 	
-	ArrayList<Client> client = new ArrayList<Client>();
+	private final ArrayList<Client> client = new ArrayList<Client>();
+
+	public ArrayList<Client> getClient() {
+		return client;
+	}
+	
+	@Override
+	public String toString() {
+		return "Bank [client=" + client + "]";
+	}
+
 
 }
