@@ -1,0 +1,29 @@
+package com.luxoft.account;
+//for git commit!
+public abstract class AbstractAccount implements Account {
+	
+	@Override
+	public void deposit(double amount) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void withdraw(double amount) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public double getBalance() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setState(AccountState closed) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
