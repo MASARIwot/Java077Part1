@@ -1,5 +1,5 @@
 package com.luxoft.account;
-
+//  lsjfngjlsn
 public abstract class AbstractAccount implements Account {
 	
 	@Override
