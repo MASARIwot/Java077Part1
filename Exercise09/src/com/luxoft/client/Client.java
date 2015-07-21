@@ -1,19 +1,24 @@
 package com.luxoft.client;
 
 public class Client {
+	private String name;
+	private Gender male;
 
-	public Client(String string, Gender male) {
-		// TODO Auto-generated constructor stub
+	public Client(String name, Gender male) {
+		this.name = name;
+		this.male = male;
+	}
+
+	public String getClientSalutation() {
+		return male.toString() + " " + name;
 	}
 
 	public Object getSalutation() {
-		// TODO Auto-generated method stub
-		return null;
+		return male.toString() + " " + name;
 	}
 
-	public Object getName() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getName() {
+		return this.name;
 	}
 
 }

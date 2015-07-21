@@ -1,12 +1,21 @@
 package com.luxoft.account;
 
 //TODO: define class body
-public class SavingAccount extends AbstractAccount implements Account {
+public class SavingAccount extends AbstractAccount  {
 
-	@Override
-	public boolean isOpen() {
-		// TODO Auto-generated method stub
-		return false;
+	public SavingAccount(int x) {
+		super(x);
+		
 	}
+	@Override
+	public void withdraw(double amount) {
+		if (state == AccountState.OPEN) {
+			if (x >= amount)
+				this.x -= amount;
+		}
+
+	}
+
+	
 
 }

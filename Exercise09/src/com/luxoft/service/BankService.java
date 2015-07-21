@@ -7,13 +7,13 @@ import com.luxoft.client.Gender;
 public class BankService {
 
 	public Bank createNewBank() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Bank();
 	}
 
-	public Client addClient(Bank bank, String string, Gender male) {
-		// TODO Auto-generated method stub
-		return null;
+	public Client addClient(Bank bank, String name, Gender male) {
+		Client client = new Client(name, male);
+		bank.getClient().add(client);
+		return client;
 	}
 
 }

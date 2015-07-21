@@ -1,24 +1,29 @@
 package com.luxoft.account;
 
-public class CheckingAccount extends AbstractAccount implements Account {
+public class CheckingAccount extends AbstractAccount {
 
-	private double overdraft;
-	// TODO: define constructor public CheckingAccount(final double amount,
-	// final double overdraft) {
+	private double overdraft = 0;
 
-	public CheckingAccount(int i, int j) {
-		// TODO Auto-generated constructor stub
-	}
-
-	public double getOverdraft() {
-		// TODO Auto-generated method stub
-		return 0;
+	public CheckingAccount(final double x, final double overdraft) {
+		super(x);
+		this.overdraft = overdraft;
 	}
 
 	@Override
-	public boolean isOpen() {
-		// TODO Auto-generated method stub
-		return false;
+	public void withdraw(double amount) {
+		if (state == AccountState.OPEN) {
+			if (x >= amount) {
+				x -= amount;
+			} else if (x < amount && amount <= overdraft) {
+				x -= amount;
+				this.overdraft -= amount;
+			}
+		}
+
+	}
+
+	public double getOverdraft() {
+		return overdraft;
 	}
 
 }
