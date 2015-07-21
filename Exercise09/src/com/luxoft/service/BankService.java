@@ -10,7 +10,7 @@ public class BankService {
 		return new Bank();
 	}
 
-	public Client addClient(Bank bank, String name, Gender male) {
+	public Client addClient(final Bank bank, String name, Gender male) {
 		Client client = new Client(name, male);
 		bank.getClient().add(client);
 		return client;

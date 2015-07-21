@@ -14,6 +14,12 @@ public class Client {
 		this.male = male;
 	}
 	
+	@Override
+	public String toString() {
+		return "Client [name=" + name + ", male=" + male + ", Number of accounts="
+				+ accounts.size() + "]";
+	}
+
 	public Account getAccount(final int id) {
 		return  accounts.get(id);
 	}
